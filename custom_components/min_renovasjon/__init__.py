@@ -179,6 +179,8 @@ class MinRenovasjon:
                 if fraksjon["Id"] == fraksjon_id:
                     fraksjon_navn = fraksjon["Navn"]
                     fraksjon_ikon = fraksjon["Ikon"]
+                    if fraksjon_ikon.startswith("http://"):
+                        fraksjon_ikon = fraksjon_ikon.replace("http://", "https://")
 
                     kalender_list.append(
                         (
